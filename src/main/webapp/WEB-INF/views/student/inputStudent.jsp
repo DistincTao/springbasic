@@ -15,5 +15,5 @@
 		<div><input type="submit" value="저장"></div>
 	</form>
 
-</body>
+</body> 
 </html>
