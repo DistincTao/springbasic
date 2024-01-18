@@ -26,7 +26,10 @@
 	</beans:bean>
 	
 	<!-- component를 scan. 아래의 base-package를 스캔하여 객체를 확보 -->
-	<context:component-scan base-package="com.springbasic.controller" />
+	<context:component-scan base-package="com.springbasic.controller/" />
+<!-- 	<context:component-scan base-package="com.springbasic.persistence" /> -->
+
+	
 		
 </beans:beans>
 
