@@ -14,9 +14,22 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
+	<!-- DB log4jdbc 설정 -->
+<!-- 	<bean id="dataSource" -->
+<!-- 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+<!-- 		<property name="url" -->
+<!-- 			value="jdbc:log4jdbc:mysql://localhost:3306/distinctao?useSSL=false&amp;serverTimezone=Asia/Seoul&amp;characterEncoding=UTF-8"> -->
+<!-- 		</property> -->
+<!-- 		<property name="username" value="root"></property> -->
+<!-- 		<property name="password" value="1234"></property> -->
+<!-- 		<property name="driverClassName" -->
+<!-- 			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+	
+	
+	
 	<!--  Connection 객체를  얻어오도록 설정 -->	
-	
-	
 	<!-- 데이터 베이스 Connection -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">

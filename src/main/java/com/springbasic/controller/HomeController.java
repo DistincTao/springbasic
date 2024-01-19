@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.springbasic.vo.Student;
+import com.springbasic.vo.StudentVo;
 
 
 @Controller // 현재 클래스가 Controller 단임을 명시
@@ -84,8 +84,8 @@ public class HomeController {
 		
 		logger.info("doAction5가 호출됨");
 
-		Student stu = new Student("240101", "dooly");
-		Student stu1 = new Student("240102", "doolllly");
+		StudentVo stu = new StudentVo("240101", "dooly");
+		StudentVo stu1 = new StudentVo("240102", "doolllly");
 		
 		model.addAttribute("student", stu);
 		model.addAttribute("student1", stu1);

@@ -1,14 +1,14 @@
 package com.springbasic.vo;
 
-public class Student {
+public class StudentVo {
 	private String stuNo;
 	private String stuName;
 	
-	public Student() {
+	public StudentVo() {
 		super();
 	}
 
-	public Student(String stuNo, String stuName) {
+	public StudentVo(String stuNo, String stuName) {
 		super();
 		this.stuNo = stuNo;
 		this.stuName = stuName;
