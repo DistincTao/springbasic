@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.springbasic.vo.Student;
+import com.springbasic.vo.StudentVo;
 
 @Controller
 @RequestMapping("/student/*") // 해당 폴더 아래의 모든 url에 대해서 mapping 처리
@@ -26,7 +26,7 @@ public class StudentController {
 	public void outputStudent(Model model) {
 		logger.info("outputStudent가 호출 됨");
 		
-		Student stu = new Student("24001", "dooly");
+		StudentVo stu = new StudentVo("24001", "dooly");
 		
 		model.addAttribute("student", stu); // 바인딩
 		
@@ -64,7 +64,7 @@ public class StudentController {
 	// redirect 시키는 경우
 	// RedirectAttributes : redirect할 때 쿼리스트링으로 어떤 값을 넘기고자 할 때 사용하는 객체
 	@RequestMapping (value="saveStudent", method = RequestMethod.POST)
-	public String inputStudent(Student stu, Model model, RedirectAttributes rttr) {
+	public String inputStudent(StudentVo stu, Model model, RedirectAttributes rttr) {
 		logger.info("saveStudent가 호출 됨");
 		
 		// redirect 
@@ -101,9 +101,9 @@ public class StudentController {
 	
 	// jackson-databind 라이브러리 추가 -> json으로 response 보내기
 	@RequestMapping("output")
-	public @ResponseBody Student sampleStudent () {
+	public @ResponseBody StudentVo sampleStudent () {
 		logger.info("sampleStudent가 호출 됨");
-		Student tmp = new Student("24001", "doochi");
+		StudentVo tmp = new StudentVo("24001", "doochi");
 		
 		return tmp;
 	}
